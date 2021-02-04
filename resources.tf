@@ -20,14 +20,6 @@ output "created_date" {
     value = aws_lambda_layer_version.lambda_layer.created_date
 }
 
-output "signing_job_arn" {
-    value = aws_lambda_layer_version.lambda_layer.signing_job_arn
-}
-
-output "signing_profile_version_arn" {
-    value = aws_lambda_layer_version.lambda_layer.signing_profile_version_arn
-}
-
 output "source_code_size" {
     value = aws_lambda_layer_version.lambda_layer.source_code_size
 }
