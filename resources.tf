@@ -3,8 +3,8 @@ variable "layer_name" {
 }
 
 resource "aws_lambda_layer_version" "lambda_layer" {
-  filename   = ".terraform/modules/lambda-layer-openssl/lambda-layer-openssl.zip"
-  source_code_hash = "${filebase64sha256(".terraform/modules/lambda-layer-openssl/lambda-layer-openssl.zip")}"
+  filename   = "${path.module}/lambda-layer-openssl.zip"
+  source_code_hash = "${filebase64sha256("${path.module}/lambda-layer-openssl.zip")}"
   layer_name = var.layer_name
 }
 
